@@ -1,0 +1,818 @@
+create database SPORT_TEAM_MANAGER;
+
+
+/*CREATING TEAMS TABLE*/
+
+
+create table TEAMS 
+(Team_name varchar(50), 
+Recent_match varchar(50),
+Opponent_ID int,
+Head_coach varchar(30),
+Stadium varchar(30),
+Stadium_location_City varchar(30), 
+Stadium_location_country varchar(30), 
+Capacity_of_stadium int);
+
+
+SELECT * FROM TEAMS;
+
+/*INSERTING VALUES IN THE TABLE*/
+
+
+
+
+INSERT INTO TEAMS VALUES ('Real Madrid','Real Sociedad',11111,'Carlo Ancelotti','Santiago Bernabeu','Madrid','Spain',85454);
+INSERT INTO TEAMS VALUES ('Real Madrid','Villarreal CF',2222,'Santiago Solari','Old Trafford','Manchester','England',75731);
+INSERT INTO TEAMS VALUES ('Real Madrid','Real Betis',100,'Zinedine Zidane','Camp Nou','Barcelona','Spain',98757);
+INSERT INTO TEAMS VALUES ('Real Madrid','Real Sociedad',11111,'Zinedine Zidane','Old Trafford','Manchester','England',75731);
+INSERT INTO TEAMS VALUES ('Real Madrid','Valencia CF',589,'Santiago Solari','Old Trafford','Manchester','England',75731);
+INSERT INTO TEAMS VALUES ('Real Madrid','Villarreal CF',0,'Zinedine Zidane','Santiago Bernabeu','Madrid','Spain',85454);
+INSERT INTO TEAMS VALUES ('Real Madrid','Getafe CF',45,'Santiago Solari','Allianz Arena','Munich','Germany',71437);
+INSERT INTO TEAMS VALUES ('Real Madrid','Real Betis',100,'Carlo Ancelotti','Signal Iduna Park','Dortmund','Germany',80645);
+INSERT INTO TEAMS VALUES ('Real Madrid','Cádiz CF',3,'Santiago Solari','Camp Nou','Barcelona','Spain',98757);
+INSERT INTO TEAMS VALUES ('Real Madrid','Getafe CF',45,'Julen Lopetegui','Signal Iduna Park','Dortmund','Germany',80645);
+INSERT INTO TEAMS VALUES ('Real Madrid','Valencia CF',589,'Julen Lopetegui','Allianz Arena','Munich','Germany',71437);
+INSERT INTO TEAMS VALUES ('Real Madrid','Real Sociedad',11111,'Zinedine Zidane','Santiago Bernabeu','Madrid','Spain',85454);
+INSERT INTO TEAMS VALUES ('Real Madrid','Granada CF',99,'Julen Lopetegui','Allianz Arena','Munich','Germany',71437);
+INSERT INTO TEAMS VALUES ('Real Madrid','Juventus',1,'Zinedine Zidane','Wembley Stadium','London','England',90000);
+INSERT INTO TEAMS VALUES ('Real Madrid','Athletic Bilbao',89,'Zinedine Zidane','Old Trafford','Manchester','England',75731);
+INSERT INTO TEAMS VALUES ('Real Madrid','Villarreal CF',0,'Julen Lopetegui','Allianz Arena','Munich','Germany',71437);
+INSERT INTO TEAMS VALUES ('Real Madrid','Getafe CF',45,'Carlo Ancelotti','Camp Nou','Barcelona','Spain',98757);
+INSERT INTO TEAMS VALUES ('Real Madrid','Real Betis',100,'Julen Lopetegui','Santiago Bernabeu','Madrid','Spain',85454);
+INSERT INTO TEAMS VALUES ('Real Madrid','Sevilla FC',200,'Zinedine Zidane','Allianz Arena','Munich','Germany',71437);
+INSERT INTO TEAMS VALUES ('Real Madrid','Getafe CF',45,'Julen Lopetegui','Wembley Stadium','London','England',90000);
+INSERT INTO TEAMS VALUES ('Real Madrid','Getafe CF',45,'Zinedine Zidane','Allianz Arena','Munich','Germany',71437);
+INSERT INTO TEAMS VALUES ('Real Madrid','Getafe CF',45,'Julen Lopetegui','Santiago Bernabeu','Madrid','Spain',85454);
+INSERT INTO TEAMS VALUES ('Real Madrid','Sevilla FC',200,'Santiago Solari','Old Trafford','Manchester','England',75731);
+INSERT INTO TEAMS VALUES ('Real Madrid','Villarreal CF',0,'Santiago Solari','Allianz Arena','Munich','Germany',71437);
+INSERT INTO TEAMS VALUES ('Real Madrid','Getafe CF',45,'Julen Lopetegui','Anfield&nbsp;','Liverpool','England',45276);
+INSERT INTO TEAMS VALUES ('Real Madrid','Cádiz CF',3,'Carlo Ancelotti','Camp Nou','Barcelona','Spain',98757);
+INSERT INTO TEAMS VALUES ('Real Madrid','Real Sociedad',11111,'Julen Lopetegui','Santiago Bernabeu','Madrid','Spain',85454);
+INSERT INTO TEAMS VALUES ('Real Madrid','FC Barcelona',150,'Julen Lopetegui','Signal Iduna Park','Dortmund','Germany',80645);
+INSERT INTO TEAMS VALUES ('Real Madrid','Real BETIS',100,'Santiago Solari','Old Trafford','Manchester','England',75731);
+INSERT INTO TEAMS VALUES ('Real Madrid','Real BETIS',100,'Santiago Solari','Camp Nou','Barcelona','Spain',98757);
+INSERT INTO TEAMS VALUES ('Real Madrid','Real Betis',100,'Zinedine Zidane','Allianz Arena','Munich','Germany',71437);
+INSERT INTO TEAMS VALUES ('Real Madrid','Real Betis',100,'Zinedine Zidane','Santiago Bernabeu','Madrid','Spain',85454);
+INSERT INTO TEAMS VALUES ('Real Madrid','Real Sociedad',11111,'Santiago Solari','Celtic Park','Glasgow','Scotland',60355);
+INSERT INTO TEAMS VALUES ('Real Madrid','Real Sociedad',11111,'Julen Lopetegui','Camp Nou','Barcelona','Spain',98757);
+INSERT INTO TEAMS VALUES ('Real Madrid','FC Barcelona',150,'Julen Lopetegui','Camp Nou','Barcelona','Spain',98757);
+INSERT INTO TEAMS VALUES ('Real Madrid','Real Sociedad',11111,'Julen Lopetegui','Old Trafford','Manchester','England',75731);
+INSERT INTO TEAMS VALUES ('Real Madrid','Atlético Madrid',11,'Zinedine Zidane','Santiago Bernabeu','Madrid','Spain',85454);
+INSERT INTO TEAMS VALUES ('Real Madrid','Real Sociedad',11111,'Zinedine Zidane','Wembley Stadium','London','England',90000);
+INSERT INTO TEAMS VALUES ('Real Madrid','Athletic Bilbao',89,'Julen Lopetegui','Allianz Arena','Munich','Germany',71437);
+INSERT INTO TEAMS VALUES ('Real Madrid','Real Sociedad',11111,'Carlo Ancelotti','Santiago Bernabeu','Madrid','Spain',85454);
+INSERT INTO TEAMS VALUES ('Real Madrid','Athletic Bilbao',89,'Julen Lopetegui','Celtic Park','Glasgow','Scotland',60355);
+INSERT INTO TEAMS VALUES ('Real Madrid','Real Betis',100,'Julen Lopetegui','Old Trafford','Manchester','England',75731);
+INSERT INTO TEAMS VALUES ('Real Madrid','Cádiz CF',3,'Zinedine Zidane','Camp Nou','Barcelona','Spain',98757);
+INSERT INTO TEAMS VALUES ('Real Madrid','Granada CF',99,'Zinedine Zidane','Anfield&nbsp;','Liverpool','England',45276);
+INSERT INTO TEAMS VALUES ('Real Madrid','Cádiz CF',3,'Zinedine Zidane','Santiago Bernabeu','Madrid','Spain',85454);
+INSERT INTO TEAMS VALUES ('Real Madrid','Athletic Bilbao',89,'Zinedine Zidane','Celtic Park','Glasgow','Scotland',60355);
+INSERT INTO TEAMS VALUES ('Real Madrid','FC Barcelona',150,'Zinedine Zidane','Allianz Arena','Munich','Germany',71437);
+INSERT INTO TEAMS VALUES ('Real Madrid','Real Sociedad',11111,'Carlo Ancelotti','Signal Iduna Park','Dortmund','Germany',80645);
+INSERT INTO TEAMS VALUES ('Real Madrid','FC Barcelona',150,'Julen Lopetegui','Camp Nou','Barcelona','Spain',98757);
+INSERT INTO TEAMS VALUES ('Real Madrid','Granada CF',99,'Julen Lopetegui','Celtic Park','Glasgow','Scotland',60355);
+INSERT INTO TEAMS VALUES ('Real Madrid','Atlético Madrid',11,'Zinedine Zidane','Santiago Bernabeu','Madrid','Spain',85454);
+INSERT INTO TEAMS VALUES ('Real Madrid','Getafe CF',45,'Carlo Ancelotti','Old Trafford','Manchester','England',75731);
+INSERT INTO TEAMS VALUES ('Real Madrid','Real Betis',100,'Carlo Ancelotti','Anfield&nbsp;','Liverpool','England',45276);
+INSERT INTO TEAMS VALUES ('Real Madrid','Real Sociedad',11111,'Zinedine Zidane','Camp Nou','Barcelona','Spain',98757);
+INSERT INTO TEAMS VALUES ('Real Madrid','Real Betis',100,'Carlo Ancelotti','Signal Iduna Park','Dortmund','Germany',80645);
+INSERT INTO TEAMS VALUES ('Real Madrid','Villarreal CF',0,'Zinedine Zidane','Santiago Bernabeu','Madrid','Spain',85454);
+INSERT INTO TEAMS VALUES ('Real Madrid','Villarreal CF',0,'Carlo Ancelotti','Allianz Arena','Munich','Germany',71437);
+INSERT INTO TEAMS VALUES ('Real Madrid','Real Sociedad',11111,'Carlo Ancelotti','Celtic Park','Glasgow','Scotland',60355);
+INSERT INTO TEAMS VALUES ('Real Madrid','Getafe CF',45,'Carlo Ancelotti','Camp Nou','Barcelona','Spain',98757);
+INSERT INTO TEAMS VALUES ('Real Madrid','FC Barcelona',150,'Carlo Ancelotti','Anfield&nbsp;','Liverpool','England',45276);
+INSERT INTO TEAMS VALUES ('Real Madrid','FC Barcelona',150,'Zinedine Zidane','Allianz Arena','Munich','Germany',71437);
+INSERT INTO TEAMS VALUES ('Real Madrid','Sevilla FC',200,'Zinedine Zidane','Santiago Bernabeu','Madrid','Spain',85454);
+INSERT INTO TEAMS VALUES ('Real Madrid','Getafe CF',45,'Carlo Ancelotti','Signal Iduna Park','Dortmund','Germany',80645);
+INSERT INTO TEAMS VALUES ('Real Madrid','Real Betis',100,'Carlo Ancelotti','Wembley Stadium','London','England',90000);
+INSERT INTO TEAMS VALUES ('Real Madrid','Granada CF',99,'Carlo Ancelotti','Camp Nou','Barcelona','Spain',98757);
+INSERT INTO TEAMS VALUES ('Real Madrid','Real Sociedad',11111,'Carlo Ancelotti','Allianz Arena','Munich','Germany',71437);
+INSERT INTO TEAMS VALUES ('Real Madrid','Getafe CF',45,'Carlo Ancelotti','Wembley Stadium','London','England',90000);
+INSERT INTO TEAMS VALUES ('Real Madrid','Atlético Madrid',11,'Carlo Ancelotti','Santiago Bernabeu','Madrid','Spain',85454);
+INSERT INTO TEAMS VALUES ('Real Madrid','Granada CF',99,'Zinedine Zidane','Allianz Arena','Munich','Germany',71437);
+INSERT INTO TEAMS VALUES ('Real Madrid','Real Betis',100,'Zinedine Zidane','Camp Nou','Barcelona','Spain',98757);
+INSERT INTO TEAMS VALUES ('Real Madrid','Real Sociedad',11111,'Zinedine Zidane','Signal Iduna Park','Dortmund','Germany',80645);
+INSERT INTO TEAMS VALUES ('Real Madrid','Villarreal CF',0,'Zinedine Zidane','Santiago Bernabeu','Madrid','Spain',85454);
+INSERT INTO TEAMS VALUES ('Real Madrid','Granada CF',99,'Zinedine Zidane','Allianz Arena','Munich','Germany',71437);
+INSERT INTO TEAMS VALUES ('Real Madrid','Sevilla FC',200,'Carlo Ancelotti','Old Trafford','Manchester','England',75731);
+INSERT INTO TEAMS VALUES ('Real Madrid','Valencia CF',589,'Zinedine Zidane','Camp Nou','Barcelona','Spain',98757);
+INSERT INTO TEAMS VALUES ('Real Madrid','Cádiz CF',3,'Zinedine Zidane','Wembley Stadium','London','England',90000);
+INSERT INTO TEAMS VALUES ('Real Madrid','Sevilla FC',200,'Zinedine Zidane','Allianz Arena','Munich','Germany',71437);
+INSERT INTO TEAMS VALUES ('Real Madrid','Valencia CF',589,'Zinedine Zidane','Signal Iduna Park','Dortmund','Germany',80645);
+INSERT INTO TEAMS VALUES ('Real Madrid','Cádiz CF',3,'Zinedine Zidane','Camp Nou','Barcelona','Spain',98757);
+INSERT INTO TEAMS VALUES ('Real Madrid','Athletic Bilbao',89,'Zinedine Zidane','Santiago Bernabeu','Madrid','Spain',85454);
+INSERT INTO TEAMS VALUES ('Real Madrid','Getafe CF',45,'Zinedine Zidane','Wembley Stadium','London','England',90000);
+INSERT INTO TEAMS VALUES ('Real Madrid','Real Sociedad',11111,'Zinedine Zidane','Estadio Azteca','Mexica City','Maxico',105064);
+INSERT INTO TEAMS VALUES ('Real Madrid','Sevilla FC',200,'Carlo Ancelotti','Camp Nou','Barcelona','Spain',98757);
+INSERT INTO TEAMS VALUES ('Real Madrid','FC Barcelona',150,'Carlo Ancelotti','Camp Nou','Barcelona','Spain',98757);
+INSERT INTO TEAMS VALUES ('Real Madrid','Athletic Bilbao',89,'Zinedine Zidane','Camp Nou','Barcelona','Spain',98757);
+INSERT INTO TEAMS VALUES ('Real Madrid','FC Barcelona',150,'Zinedine Zidane','Anfield&nbsp;','Liverpool','England',45276);
+INSERT INTO TEAMS VALUES ('Real Madrid','Granada CF',99,'Zinedine Zidane','Estadio Azteca','Mexica City','Maxico',105064);
+INSERT INTO TEAMS VALUES ('Real Madrid','Real Betis',100,'Zinedine Zidane','Wembley Stadium','London','England',90000);
+INSERT INTO TEAMS VALUES ('Real Madrid','Cádiz CF',3,'Zinedine Zidane','Allianz Arena','Munich','Germany',71437);
+INSERT INTO TEAMS VALUES ('Real Madrid','Athletic Bilbao',89,'Zinedine Zidane','Camp Nou','Barcelona','Spain',98757);
+INSERT INTO TEAMS VALUES ('Real Madrid','Real Sociedad',11111,'Carlo Ancelotti','Celtic Park','Glasgow','Scotland',60355);
+INSERT INTO TEAMS VALUES ('Real Madrid','FC Barcelona',150,'Santiago Solari','Camp Nou','Barcelona','Spain',98757);
+INSERT INTO TEAMS VALUES ('Real Madrid','Granada CF',99,'Zinedine Zidane','Santiago Bernabeu','Madrid','Spain',85454);
+INSERT INTO TEAMS VALUES ('Real Madrid','Atlético Madrid',11,'Santiago Solari','Santiago Bernabeu','Madrid','Spain',85454);
+INSERT INTO TEAMS VALUES ('Real Madrid','Cádiz CF',3,'Zinedine Zidane','Anfield&nbsp;','Liverpool','England',45276);
+INSERT INTO TEAMS VALUES ('Real Madrid','Sevilla FC',200,'Zinedine Zidane','Allianz Arena','Munich','Germany',71437);
+INSERT INTO TEAMS VALUES ('Real Madrid','Villarreal CF',0,'Zinedine Zidane','Camp Nou','Barcelona','Spain',98757);
+INSERT INTO TEAMS VALUES ('Real Madrid','FC Barcelona',150,'Santiago Solari','Allianz Arena','Munich','Germany',71437);
+INSERT INTO TEAMS VALUES ('Real Madrid','Athletic Bilbao',89,'Zinedine Zidane','Allianz Arena','Munich','Germany',71437);
+INSERT INTO TEAMS VALUES ('Real Madrid','Atlético Madrid',11,'Santiago Solari','Santiago Bernabeu','Madrid','Spain',85454);
+INSERT INTO TEAMS VALUES ('Real Madrid','Getafe CF',45,'Santiago Solari','Allianz Arena','Munich','Germany',71437);
+INSERT INTO TEAMS VALUES ('Real Madrid','FC Barcelona',150,'Carlo Ancelotti','Camp Nou','Barcelona','Spain',98757);
+INSERT INTO TEAMS VALUES ('Real Madrid','Getafe CF',45,'Santiago Solari','Allianz Arena','Munich','Germany',71437);
+INSERT INTO TEAMS VALUES ('Real Madrid','Juventus',1,'Zinedine Zidane','Estadio Azteca','Mexica City','Maxico',105064);
+INSERT INTO TEAMS VALUES ('Real Madrid','Getafe CF',45,'Santiago Solari','Camp Nou','Barcelona','Spain',98757);
+INSERT INTO TEAMS VALUES ('Real Madrid','Cádiz CF',3,'Carlo Ancelotti','Estadio Azteca','Mexica City','Maxico',105064);
+INSERT INTO TEAMS VALUES ('Real Madrid','Cádiz CF',3,'Santiago Solari','Wembley Stadium','London','England',90000);
+INSERT INTO TEAMS VALUES ('Real Madrid','Atlético Madrid',11,'Zinedine Zidane','Signal Iduna Park','Dortmund','Germany',80645);
+INSERT INTO TEAMS VALUES ('Real Madrid','Atlético Madrid',11,'Santiago Solari','Santiago Bernabeu','Madrid','Spain',85454);
+INSERT INTO TEAMS VALUES ('Real Madrid','Granada CF',99,'Zinedine Zidane','Allianz Arena','Munich','Germany',71437);
+INSERT INTO TEAMS VALUES ('Real Madrid','Atlético Madrid',11,'Santiago Solari','Santiago Bernabeu','Madrid','Spain',85454);
+INSERT INTO TEAMS VALUES ('Real Madrid','Atlético Madrid',11,'Zinedine Zidane','Signal Iduna Park','Dortmund','Germany',80645);
+INSERT INTO TEAMS VALUES ('Real Madrid','Granada CF',99,'Santiago Solari','Wembley Stadium','London','England',90000);
+INSERT INTO TEAMS VALUES ('Real Madrid','Atlético Madrid',11,'Zinedine Zidane','Camp Nou','Barcelona','Spain',98757);
+INSERT INTO TEAMS VALUES ('Real Madrid','Getafe CF',45,'Santiago Solari','Signal Iduna Park','Dortmund','Germany',80645);
+INSERT INTO TEAMS VALUES ('Real Madrid','Cádiz CF',3,'Santiago Solari','Old Trafford','Manchester','England',75731);
+INSERT INTO TEAMS VALUES ('Real Madrid','Juventus',1,'Zinedine Zidane','Camp Nou','Barcelona','Spain',98757);
+INSERT INTO TEAMS VALUES ('Real Madrid','Getafe CF',45,'Carlo Ancelotti','Allianz Arena','Munich','Germany',71437);
+INSERT INTO TEAMS VALUES ('Real Madrid','Real Sociedad',11111,'Zinedine Zidane','Wembley Stadium','London','England',90000);
+INSERT INTO TEAMS VALUES ('Real Madrid','Real Sociedad',11111,'Zinedine Zidane','Santiago Bernabeu','Madrid','Spain',85454);
+
+
+/*CREATING MATCHES TABLE*/
+
+
+create table MATCHES 
+(Match_id int primary key,
+Opponent_ID int,
+Opponent varchar(30), 
+Players int, 
+date_of_the_match date, 
+Assistant_coach varchar(30), 
+Physio varchar(30), 
+Team_captain varchar(30), 
+Result varchar(15), 
+Score_line varchar(20));
+
+
+SELECT * FROM MATCHES;
+
+/*INSERTING VALUES IN THE TABLE*/
+
+INSERT INTO MATCHES VALUES (1,11111,'Real Sociedad',11,'09/16/2022','Luis Sánchez','David López','Carlos Martínez','L','3\3');
+INSERT INTO MATCHES VALUES (51,2222,'Villarreal CF',11,'01/10/2023','Juan García','Luis López','Juan Rodríguez','W','3\2');
+INSERT INTO MATCHES VALUES (101,100,'Real Betis',11,'09/25/2022','Jorge Pérez','Luis Torres','Pedro Rodríguez','L','3\1');
+INSERT INTO MATCHES VALUES (151,11111,'Real Sociedad',11,'05/05/2022','José Torres','Juan Hernández','José Torres','D','3\1');
+INSERT INTO MATCHES VALUES (201,589,'Valencia CF',11,'01/26/2023','Francisco Ramírez','Carlos Torres','Pedro Sánchez','W','0 \ 2');
+INSERT INTO MATCHES VALUES (251,2222,'Villarreal CF',11,'09/26/2022','Pedro Sánchez','Francisco Sánchez','Juan Rodríguez','W','0 \ 2');
+INSERT INTO MATCHES VALUES (301,45,'Getafe CF',11,'12/15/2022','Antonio Hernández','Luis Pérez','Juan Hernández','D','3\3');
+INSERT INTO MATCHES VALUES (351,100,'Real Betis',11,'05/20/2022','Francisco García','Juan Rodríguez','Miguel Hernández','D','3\1');
+INSERT INTO MATCHES VALUES (401,3,'Cádiz CF',11,'06/23/2022','Antonio Ramírez','Francisco Martínez','Carlos Ramírez','W','1 \ 0');
+INSERT INTO MATCHES VALUES (451,45,'Getafe CF',11,'02/10/2023','Jorge Sánchez','Pedro Pérez','Carlos Sánchez','L','4 \ 0');
+INSERT INTO MATCHES VALUES (501,589,'Valencia CF',11,'02/23/2023','Francisco Martínez','Jorge López','David Rodríguez','L','2\1');
+INSERT INTO MATCHES VALUES (551,11111,'Real Sociedad',11,'07/13/2022','Carlos González','David Ramírez','Miguel Hernández','W','0 \ 2');
+INSERT INTO MATCHES VALUES (601,99,'Granada CF',11,'10/05/2022','Carlos Sánchez','Luis Rodríguez','Antonio González','D','1\1');
+INSERT INTO MATCHES VALUES (651,1,'Juventus',11,'11/09/2022','José Torres','Francisco Pérez','José Torres','W','2 \ 0');
+INSERT INTO MATCHES VALUES (701,89,'Athletic Bilbao',11,'09/15/2022','José Martínez','David Torres','Jorge Hernández','L','0 \ 2');
+INSERT INTO MATCHES VALUES (751,2222,'Villarreal CF',11,'02/02/2023','Carlos García','Luis Sánchez','David Pérez','D','3\5');
+INSERT INTO MATCHES VALUES (801,45,'Getafe CF',11,'06/18/2022','Pedro Sánchez','David Ramírez','José Ramírez','D','1\5');
+INSERT INTO MATCHES VALUES (851,100,'Real Betis',11,'04/22/2022','Luis Pérez','José Hernández','Pedro Ramírez','D','3 \ 0');
+INSERT INTO MATCHES VALUES (901,200,'Sevilla FC',11,'10/01/2022','Pedro Hernández','Miguel Sánchez','Miguel Torres','L','0 \ 3');
+INSERT INTO MATCHES VALUES (951,45,'Getafe CF',11,'07/16/2022','Carlos González','Luis Pérez','Carlos García','W','1 \ 0');
+INSERT INTO MATCHES VALUES (1001,45,'Getafe CF',11,'09/27/2022','Luis Pérez','David Rodríguez','Juan López','L','4 \ 0');
+INSERT INTO MATCHES VALUES (1051,45,'Getafe CF',11,'08/14/2022','Antonio Hernández','David López','Pedro Rodríguez','W','2\3');
+INSERT INTO MATCHES VALUES (1101,200,'Sevilla FC',11,'12/16/2022','José Sánchez','Francisco Rodríguez','Antonio Sánchez','D','0 \ 0');
+INSERT INTO MATCHES VALUES (1151,2222,'Villarreal CF',11,'02/16/2023','Francisco Martínez','Luis Rodríguez','Antonio López','L','4\4');
+INSERT INTO MATCHES VALUES (1201,45,'Getafe CF',11,'08/21/2022','Antonio Sánchez','Pedro Martínez','Carlos López','D','0 \ 0');
+INSERT INTO MATCHES VALUES (1251,3,'Cádiz CF',11,'06/21/2022','José López','David Torres','Carlos Torres','L','0 \ 1');
+INSERT INTO MATCHES VALUES (1301,11111,'Real Sociedad',11,'12/04/2022','David Rodríguez','José Pérez','Francisco Rodríguez','L','1\2');
+INSERT INTO MATCHES VALUES (1351,150,'FC Barcelona',11,'12/11/2022','Carlos Pérez','Luis Torres','David García','L','2\4');
+INSERT INTO MATCHES VALUES (1401,1,'Juventus',11,'07/11/2022','Carlos Sánchez','Juan González','Jorge González','W','3\4');
+INSERT INTO MATCHES VALUES (1451,1,'Juventus',11,'04/20/2022','Miguel López','Francisco García','Francisco Hernández','W','1 \ 0');
+INSERT INTO MATCHES VALUES (1501,100,'Real Betis',11,'08/02/2022','Jorge García','Jorge López','David Torres','L','3\1');
+INSERT INTO MATCHES VALUES (1551,100,'Real Betis',11,'03/31/2023','Miguel Ramírez','David González','Juan Sánchez','W','4\1');
+INSERT INTO MATCHES VALUES (1601,1,'Juventus',11,'03/03/2023','José Pérez','Juan Sánchez','Miguel López','W','0 \ 2');
+INSERT INTO MATCHES VALUES (1651,1,'Juventus',11,'05/27/2022','Jorge Sánchez','Jorge García','Antonio López','L','4\1');
+INSERT INTO MATCHES VALUES (1701,150,'FC Barcelona',11,'04/14/2023','David García','David Sánchez','Jorge Rodríguez','L','2\1');
+INSERT INTO MATCHES VALUES (1751,11111,'Real Sociedad',11,'08/05/2022','Jorge Martínez','Jorge Sánchez','Jorge González','W','3 \ 0');
+INSERT INTO MATCHES VALUES (1801,20,'Atlético Madrid',11,'11/02/2022','David Rodríguez','Juan Sánchez','Jorge Hernández','W','1 \ 0');
+INSERT INTO MATCHES VALUES (1851,1,'Juventus',11,'12/28/2022','Antonio Sánchez','Luis González','Juan González','L','5\2');
+INSERT INTO MATCHES VALUES (1901,1,'Juventus',11,'02/02/2023','David García','Jorge Martínez','Miguel Ramírez','D','1 \ 0');
+INSERT INTO MATCHES VALUES (1951,11111,'Real Sociedad',11,'08/30/2022','Francisco Rodríguez','David García','Francisco López','D','5 \ 0');
+INSERT INTO MATCHES VALUES (2001,1,'Juventus',11,'08/29/2022','Francisco Torres','José Pérez','Juan Ramírez','L','1\3');
+INSERT INTO MATCHES VALUES (2051,100,'Real Betis',11,'07/08/2022','Carlos Torres','Francisco Ramírez','Pedro Pérez','D','2\5');
+INSERT INTO MATCHES VALUES (2101,3,'Cádiz CF',11,'06/04/2022','David Ramírez','Carlos Torres','Jorge García','W','2\5');
+INSERT INTO MATCHES VALUES (2151,99,'Granada CF',11,'03/06/2023','Carlos Martínez','Miguel Torres','Carlos Pérez','D','3\5');
+INSERT INTO MATCHES VALUES (2201,3,'Cádiz CF',11,'01/04/2023','Jorge Rodríguez','Miguel López','Jorge González','W','0 \ 3');
+INSERT INTO MATCHES VALUES (2251,89,'Athletic Bilbao',11,'11/21/2022','Juan Hernández','Carlos González','Miguel Torres','D','5\2');
+INSERT INTO MATCHES VALUES (2301,150,'FC Barcelona',11,'05/23/2022','Miguel Rodríguez','Juan Martínez','Jorge Rodríguez','W','4\1');
+INSERT INTO MATCHES VALUES (2351,11111,'Real Sociedad',11,'03/12/2023','Jorge Sánchez','Antonio García','Carlos González','D','0 \ 5');
+INSERT INTO MATCHES VALUES (2401,150,'FC Barcelona',11,'05/23/2022','Miguel García','Luis Sánchez','Antonio Ramírez','L','4\1');
+INSERT INTO MATCHES VALUES (2451,99,'Granada CF',11,'11/11/2022','José Martínez','David Pérez','Jorge Ramírez','D','5\2');
+INSERT INTO MATCHES VALUES (2501,20,'Atlético Madrid',11,'03/30/2023','Pedro Torres','Miguel Torres','José Martínez','W','1\5');
+INSERT INTO MATCHES VALUES (2551,45,'Getafe CF',11,'08/04/2022','Francisco Hernández','Miguel Rodríguez','David Martínez','D','0 \ 5');
+INSERT INTO MATCHES VALUES (2601,100,'Real Betis',11,'10/09/2022','Luis Hernández','Juan González','Luis García','D','0 \ 5');
+INSERT INTO MATCHES VALUES (2651,11111,'Real Sociedad',11,'12/18/2022','Jorge Pérez','Carlos Rodríguez','José Torres','D','0 \ 0');
+INSERT INTO MATCHES VALUES (2701,100,'Real Betis',11,'08/02/2022','Francisco Ramírez','Carlos Hernández','Antonio García','L','3\2');
+INSERT INTO MATCHES VALUES (2751,2222,'Villarreal CF',11,'01/05/2023','Carlos Rodríguez','Carlos González','Jorge Ramírez','D','4\3');
+INSERT INTO MATCHES VALUES (2801,2222,'Villarreal CF',11,'03/09/2023','José Torres','Miguel Ramírez','Jorge González','W','0 \ 2');
+INSERT INTO MATCHES VALUES (2851,11111,'Real Sociedad',11,'06/11/2022','Antonio García','Miguel Pérez','Luis González','D','3\4');
+INSERT INTO MATCHES VALUES (2901,1,'Juventus',11,'02/17/2023','Jorge López','Antonio Rodríguez','David López','L','3\1');
+INSERT INTO MATCHES VALUES (2951,150,'FC Barcelona',11,'08/09/2022','Carlos González','Francisco Torres','Pedro Sánchez','L','1\4');
+INSERT INTO MATCHES VALUES (3001,150,'FC Barcelona',11,'08/04/2022','Carlos Pérez','Francisco Martínez','Jorge Martínez','W','2\5');
+INSERT INTO MATCHES VALUES (3051,200,'Sevilla FC',11,'07/04/2022','Carlos García','Juan García','David López','L','1\4');
+INSERT INTO MATCHES VALUES (3101,45,'Getafe CF',11,'11/06/2022','Pedro Hernández','Miguel González','Francisco Ramírez','W','2\1');
+INSERT INTO MATCHES VALUES (3151,100,'Real Betis',11,'11/12/2022','Antonio García','Juan Hernández','Francisco Sánchez','W','1\4');
+INSERT INTO MATCHES VALUES (3201,99,'Granada CF',11,'10/15/2022','Francisco López','Juan Hernández','Francisco Sánchez','L','2\4');
+INSERT INTO MATCHES VALUES (3251,11111,'Real Sociedad',11,'08/28/2022','Miguel Torres','Francisco Martínez','Pedro Torres','D','1\3');
+INSERT INTO MATCHES VALUES (3301,45,'Getafe CF',11,'06/27/2022','Luis García','David Sánchez','Miguel Ramírez','L','5\5');
+INSERT INTO MATCHES VALUES (3351,20,'Atlético Madrid',11,'05/14/2022','Antonio Ramírez','José González','Miguel Sánchez','L','2\4');
+INSERT INTO MATCHES VALUES (3401,99,'Granada CF',11,'10/06/2022','José González','Miguel López','Carlos López','L','0 \ 2');
+INSERT INTO MATCHES VALUES (3451,100,'Real Betis',11,'08/20/2022','Juan Martínez','Carlos Ramírez','Miguel Hernández','L','3\3');
+INSERT INTO MATCHES VALUES (3501,11111,'Real Sociedad',11,'06/14/2022','Juan González','Jorge Sánchez','Francisco Ramírez','D','1\4');
+INSERT INTO MATCHES VALUES (3551,2222,'Villarreal CF',11,'02/06/2023','Antonio González','Luis García','Jorge Hernández','W','3\2');
+INSERT INTO MATCHES VALUES (3601,99,'Granada CF',11,'08/17/2022','Miguel Sánchez','David González','José Ramírez','D','4\5');
+INSERT INTO MATCHES VALUES (3651,200,'Sevilla FC',11,'05/05/2022','Luis Torres','Antonio Pérez','Francisco Sánchez','W','3\1');
+INSERT INTO MATCHES VALUES (3701,589,'Valencia CF',11,'04/02/2023','Jorge Hernández','Miguel Martínez','José González','D','3\3');
+INSERT INTO MATCHES VALUES (3751,3,'Cádiz CF',11,'10/23/2022','Miguel López','Luis Pérez','Carlos Hernández','L','0 \ 1');
+INSERT INTO MATCHES VALUES (3801,200,'Sevilla FC',11,'06/16/2022','Pedro Rodríguez','Jorge Martínez','Francisco Rodríguez','D','2\2');
+INSERT INTO MATCHES VALUES (3851,1,'Juventus',11,'04/21/2022','Miguel Sánchez','Carlos Ramírez','José Hernández','L','4\1');
+INSERT INTO MATCHES VALUES (3901,3,'Cádiz CF',11,'01/02/2023','Pedro López','Carlos Rodríguez','Luis Pérez','L','3\1');
+INSERT INTO MATCHES VALUES (3951,89,'Athletic Bilbao',11,'11/09/2022','José García','David Rodríguez','Miguel García','D','4\4');
+INSERT INTO MATCHES VALUES (4001,45,'Getafe CF',11,'01/14/2023','Francisco García','Francisco García','Juan García','W','3\1');
+INSERT INTO MATCHES VALUES (4051,11111,'Real Sociedad',11,'07/18/2022','Jorge García','Francisco Hernández','Miguel Pérez','W','4\1');
+INSERT INTO MATCHES VALUES (4101,200,'Sevilla FC',11,'08/18/2022','Carlos García','Miguel Pérez','Antonio Hernández','L','2\4');
+INSERT INTO MATCHES VALUES (4151,150,'FC Barcelona',11,'01/25/2023','David Rodríguez','David Hernández','Francisco González','D','5\1');
+INSERT INTO MATCHES VALUES (4201,89,'Athletic Bilbao',11,'09/09/2022','Miguel Torres','José Pérez','David López','W','5 \ 0');
+INSERT INTO MATCHES VALUES (4251,150,'FC Barcelona',11,'07/30/2022','José Pérez','Carlos Pérez','Pedro Ramírez','W','4\4');
+INSERT INTO MATCHES VALUES (4301,99,'Granada CF',11,'11/28/2022','José López','Antonio Pérez','Pedro López','W','5\5');
+INSERT INTO MATCHES VALUES (4351,100,'Real Betis',11,'08/16/2022','Pedro Martínez','José González','Jorge Sánchez','L','1\2');
+INSERT INTO MATCHES VALUES (4401,3,'Cádiz CF',11,'05/16/2022','Miguel Hernández','José Pérez','Antonio Torres','D','4\3');
+INSERT INTO MATCHES VALUES (4451,89,'Athletic Bilbao',11,'07/31/2022','Francisco Ramírez','David Torres','Luis Sánchez','D','3\3');
+INSERT INTO MATCHES VALUES (4501,11111,'Real Sociedad',11,'09/06/2022','Antonio González','Juan López','Carlos Pérez','W','2\5');
+INSERT INTO MATCHES VALUES (4551,150,'FC Barcelona',11,'10/01/2022','Carlos Rodríguez','Luis López','Juan Torres','W','4\1');
+INSERT INTO MATCHES VALUES (4601,99,'Granada CF',11,'03/06/2023','Miguel González','Juan Rodríguez','Jorge Pérez','W','2\5');
+INSERT INTO MATCHES VALUES (4651,20,'Atlético Madrid',11,'10/17/2022','Carlos Sánchez','Miguel Rodríguez','José Ramírez','L','5\3');
+INSERT INTO MATCHES VALUES (4701,3,'Cádiz CF',11,'06/29/2022','Juan López','Francisco González','Francisco García','L','3\4');
+INSERT INTO MATCHES VALUES (4751,200,'Sevilla FC',11,'03/19/2023','David González','Francisco López','David Ramírez','W','2\5');
+INSERT INTO MATCHES VALUES (4801,2222,'Villarreal CF',11,'08/30/2022','Juan Pérez','José Ramírez','Jorge González','D','3\2');
+INSERT INTO MATCHES VALUES (4851,1,'Juventus',11,'02/27/2023','Antonio García','Juan Martínez','Antonio Sánchez','W','3\1');
+INSERT INTO MATCHES VALUES (4901,89,'Athletic Bilbao',11,'06/19/2022','Luis Ramírez','Antonio García','Carlos González','W','3\5');
+INSERT INTO MATCHES VALUES (4951,20,'Atlético Madrid',11,'12/30/2022','Miguel Hernández','David Sánchez','Luis Pérez','W','1 \ 0');
+INSERT INTO MATCHES VALUES (5001,45,'Getafe CF',11,'11/18/2022','Carlos Rodríguez','Antonio Hernández','Juan Rodríguez','D','5\4');
+INSERT INTO MATCHES VALUES (5051,150,'FC Barcelona',11,'08/02/2022','Jorge Ramírez','José Hernández','José Pérez','L','4\4');
+INSERT INTO MATCHES VALUES (5101,45,'Getafe CF',11,'06/09/2022','David García','Jorge Martínez','Juan García','L','1\5');
+INSERT INTO MATCHES VALUES (5151,1,'Juventus',11,'07/31/2022','Pedro García','Antonio Torres','Miguel González','W','2 \ 0');
+INSERT INTO MATCHES VALUES (5201,45,'Getafe CF',11,'03/10/2023','David González','Juan Ramírez','Carlos Martínez','W','4 \ 0');
+INSERT INTO MATCHES VALUES (5251,3,'Cádiz CF',11,'12/14/2022','Miguel García','José García','Luis Ramírez','D','5\5');
+INSERT INTO MATCHES VALUES (5301,1,'Juventus',11,'03/01/2023','Francisco Martínez','José Pérez','David Torres','W','3\5');
+INSERT INTO MATCHES VALUES (5351,20,'Atlético Madrid',11,'02/16/2023','Francisco González','Luis Sánchez','Jorge Sánchez','D','0\0');
+INSERT INTO MATCHES VALUES (5401,20,'Atlético Madrid',11,'08/25/2022','Juan Martínez','Juan García','Carlos Rodríguez','W','1\4');
+INSERT INTO MATCHES VALUES (5451,99,'Granada CF',11,'10/05/2022','José Martínez','Pedro Rodríguez','Miguel López','D','3\1');
+INSERT INTO MATCHES VALUES (5501,1,'Juventus',11,'08/16/2022','Francisco Sánchez','Pedro Torres','Francisco González','D','2\2');
+INSERT INTO MATCHES VALUES (5551,1,'Juventus',11,'01/20/2023','Miguel Rodríguez','David González','Pedro Torres','W','5\5');
+INSERT INTO MATCHES VALUES (5601,99,'Granada CF',11,'01/05/2023','Miguel González','Miguel González','Carlos García','W','4\5');
+INSERT INTO MATCHES VALUES (5651,20,'Atlético Madrid',11,'01/19/2023','José López','Jorge Martínez','Miguel García','L','4\5');
+INSERT INTO MATCHES VALUES (5701,45,'Getafe CF',11,'12/12/2022','Juan González','Jorge Pérez','Carlos García','D','3\5');
+INSERT INTO MATCHES VALUES (5751,3,'Cádiz CF',11,'01/21/2023','José Martínez','Juan Ramírez','Juan González','L','4\3');
+INSERT INTO MATCHES VALUES (5801,1,'Juventus',11,'08/10/2022','Miguel García','Pedro García','José Pérez','D','5\5');
+INSERT INTO MATCHES VALUES (5851,45,'Getafe CF',11,'01/13/2023','Antonio García','Jorge Sánchez','Antonio López','W','2\4');
+INSERT INTO MATCHES VALUES (5901,1,'Juventus',11,'08/04/2022','David Ramírez','David Torres','Miguel Pérez','D','1\1');
+INSERT INTO MATCHES VALUES (5951,200,'Sevilla FC',11,'04/25/2022','David Torres','Francisco Hernández','Juan Hernández','W','1\4');
+
+
+
+
+
+
+
+/*CREATING PLAYERS TABLE*/
+
+
+CREATE table PLAYERS 
+(Opponent_ID int,
+Player_ID int PRIMARY KEY,
+First_name varchar(30) not null, 
+Last_name varchar(30) not null, 
+Position varchar(40), 
+Nationality varchar(30), 
+Appearences int, 
+Monthly_wage int, 
+Transfer_value int, 
+Player_availability varchar(30));
+
+SELECT * FROM PLAYERS;
+
+
+ 
+
+/*INSERTING VALUES IN THE TABLE*/
+
+
+
+INSERT INTO PLAYERS  VALUES (11111,124,'Juan','García','Midfielder','Portuguese',14,81000,95000000,'Available');
+INSERT INTO PLAYERS  VALUES (2222,147,'Francisco','Pérez','Forward','Spanish',1,57000,28000000,'Available');
+INSERT INTO PLAYERS  VALUES (100,170,'Francisco','Torres','Goalkeeper','English',12,289000,54000000,'Available');
+INSERT INTO PLAYERS  VALUES (11111,193,'Antonio','Torres','Midfielder','Spanish',48,91000,90000000,'Injured');
+INSERT INTO PLAYERS  VALUES (589,216,'Pedro','López','Defender','Portuguese',48,182000,14000000,'Available');
+INSERT INTO PLAYERS  VALUES (0,239,'José','Pérez','Midfielder','German',38,145000,6000000,'Suspended');
+INSERT INTO PLAYERS  VALUES (45,262,'Antonio','Ramírez','Goalkeeper','Italian',5,292000,38000000,'Suspended');
+INSERT INTO PLAYERS  VALUES (100,285,'David','González','Defender','Argentinian',2,126000,99000000,'Injured');
+INSERT INTO PLAYERS  VALUES (3,308,'Juan','Rodríguez','Goalkeeper','Italian',17,242000,82000000,'Injured');
+INSERT INTO PLAYERS  VALUES (45,331,'Miguel','González','Midfielder','Portuguese',42,146000,90000000,'Suspended');
+INSERT INTO PLAYERS  VALUES (589,354,'Juan','Torres','Defender','English',46,135000,21000000,'Injured');
+INSERT INTO PLAYERS  VALUES (11111,377,'José','López','Defender','German',49,38000,30000000,'Available');
+INSERT INTO PLAYERS  VALUES (99,400,'Pedro','Hernández','Midfielder','Argentinian',13,300000,92000000,'Injured');
+INSERT INTO PLAYERS  VALUES (1,423,'Luis','Sánchez','Forward','Dutch',9,145000,18000000,'Available');
+INSERT INTO PLAYERS  VALUES (89,446,'Francisco','Ramírez','Midfielder','Belgian',27,214000,47000000,'Available');
+INSERT INTO PLAYERS  VALUES (0,469,'Miguel','Ramírez','Forward','Argentinian',48,34000,15000000,'Available');
+INSERT INTO PLAYERS  VALUES (45,492,'Miguel','Hernández','Goalkeeper','Italian',24,249000,68000000,'Injured');
+INSERT INTO PLAYERS  VALUES (100,515,'Francisco','García','Goalkeeper','English',48,146000,99000000,'Suspended');
+INSERT INTO PLAYERS  VALUES (200,538,'Pedro','Pérez','Midfielder','Italian',10,242000,1000000,'Suspended');
+INSERT INTO PLAYERS  VALUES (45,561,'Jorge','Ramírez','Defender','English',6,162000,82000000,'Suspended');
+INSERT INTO PLAYERS  VALUES (45,584,'David','Rodríguez','Defender','German',48,92000,70000000,'Suspended');
+INSERT INTO PLAYERS  VALUES (45,607,'Carlos','Torres','Midfielder','Dutch',1,67000,47000000,'Injured');
+INSERT INTO PLAYERS  VALUES (200,630,'Luis','García','Defender','Belgian',5,53000,94000000,'Injured');
+INSERT INTO PLAYERS  VALUES (0,653,'Juan','Ramírez','Defender','Brazilian',42,253000,71000000,'Available');
+INSERT INTO PLAYERS  VALUES (45,676,'Jorge','Ramírez','Forward','Portuguese',34,112000,92000000,'Injured');
+INSERT INTO PLAYERS  VALUES (3,699,'José','González','Forward','English',28,71000,32000000,'Available');
+INSERT INTO PLAYERS  VALUES (11111,722,'Juan','González','Goalkeeper','Belgian',35,127000,76000000,'Available');
+INSERT INTO PLAYERS  VALUES (150,745,'Carlos','Pérez','Goalkeeper','Portuguese',4,26000,43000000,'Available');
+INSERT INTO PLAYERS  VALUES (100,768,'Francisco','Rodríguez','Midfielder','Dutch',13,286000,17000000,'Suspended');
+INSERT INTO PLAYERS  VALUES (100,791,'David','Torres','Forward','Portuguese',50,252000,53000000,'Available');
+INSERT INTO PLAYERS  VALUES (100,814,'Juan','Pérez','Forward','German',27,220000,60000000,'Suspended');
+INSERT INTO PLAYERS  VALUES (100,837,'Carlos','Pérez','Goalkeeper','Italian',46,183000,14000000,'Available');
+INSERT INTO PLAYERS  VALUES (11111,860,'Luis','Rodríguez','Forward','Brazilian',27,103000,36000000,'Injured');
+INSERT INTO PLAYERS  VALUES (11111,883,'Luis','Pérez','Forward','English',6,35000,84000000,'Suspended');
+INSERT INTO PLAYERS  VALUES (150,906,'Carlos','Pérez','Defender','Brazilian',26,258000,62000000,'Available');
+INSERT INTO PLAYERS  VALUES (11111,929,'José','García','Defender','Italian',0,209000,34000000,'Injured');
+INSERT INTO PLAYERS  VALUES (11,952,'Jorge','Hernández','Forward','Brazilian',12,161000,28000000,'Available');
+INSERT INTO PLAYERS  VALUES (11111,975,'David','Ramírez','Goalkeeper','German',3,35000,75000000,'Injured');
+INSERT INTO PLAYERS  VALUES (89,998,'Francisco','Ramírez','Defender','Spanish',32,51000,24000000,'Available');
+INSERT INTO PLAYERS  VALUES (11111,1021,'David','Pérez','Defender','Italian',7,136000,75000000,'Suspended');
+INSERT INTO PLAYERS  VALUES (89,1044,'Carlos','Torres','Goalkeeper','Italian',42,299000,67000000,'Injured');
+INSERT INTO PLAYERS  VALUES (100,1067,'Jorge','Rodríguez','Midfielder','Portuguese',16,212000,17000000,'Suspended');
+INSERT INTO PLAYERS  VALUES (3,1090,'Jorge','Sánchez','Midfielder','Argentinian',0,244000,80000000,'Suspended');
+INSERT INTO PLAYERS  VALUES (99,1113,'Juan','Pérez','Defender','English',16,77000,45000000,'Available');
+INSERT INTO PLAYERS  VALUES (3,1136,'Luis','González','Midfielder','Brazilian',28,288000,91000000,'Injured');
+INSERT INTO PLAYERS  VALUES (89,1159,'David','Ramírez','Goalkeeper','English',19,63000,18000000,'Injured');
+INSERT INTO PLAYERS  VALUES (150,1182,'Juan','Pérez','Defender','French',18,117000,92000000,'Injured');
+INSERT INTO PLAYERS  VALUES (11111,1205,'Luis','López','Forward','French',3,57000,82000000,'Injured');
+INSERT INTO PLAYERS  VALUES (150,1228,'Jorge','García','Goalkeeper','German',49,76000,82000000,'Injured');
+INSERT INTO PLAYERS  VALUES (99,1251,'Miguel','Sánchez','Forward','English',0,67000,10000000,'Suspended');
+INSERT INTO PLAYERS  VALUES (11,1274,'Miguel','Ramírez','Goalkeeper','German',37,292000,19000000,'Injured');
+INSERT INTO PLAYERS  VALUES (45,1297,'Miguel','García','Midfielder','German',50,30000,46000000,'Available');
+INSERT INTO PLAYERS  VALUES (100,1320,'Luis','Pérez','Midfielder','English',26,89000,31000000,'Available');
+INSERT INTO PLAYERS  VALUES (11111,1343,'Miguel','Hernández','Goalkeeper','Brazilian',47,180000,53000000,'Suspended');
+INSERT INTO PLAYERS  VALUES (100,1366,'Luis','López','Defender','Argentinian',24,29000,61000000,'Available');
+INSERT INTO PLAYERS  VALUES (0,1389,'Luis','Sánchez','Midfielder','French',50,126000,29000000,'Available');
+INSERT INTO PLAYERS  VALUES (0,1412,'Luis','Hernández','Midfielder','French',4,152000,45000000,'Suspended');
+INSERT INTO PLAYERS  VALUES (11111,1435,'Francisco','Hernández','Midfielder','Spanish',7,143000,23000000,'Suspended');
+INSERT INTO PLAYERS  VALUES (45,1458,'Jorge','García','Goalkeeper','Belgian',27,186000,94000000,'Injured');
+INSERT INTO PLAYERS  VALUES (150,1481,'José','Torres','Goalkeeper','Italian',36,107000,33000000,'Available');
+INSERT INTO PLAYERS  VALUES (150,1504,'José','García','Defender','German',27,45000,86000000,'Injured');
+INSERT INTO PLAYERS  VALUES (200,1527,'David','González','Goalkeeper','French',32,168000,86000000,'Injured');
+INSERT INTO PLAYERS  VALUES (45,1550,'Pedro','Hernández','Midfielder','English',8,108000,54000000,'Suspended');
+INSERT INTO PLAYERS  VALUES (100,1573,'José','Martínez','Midfielder','Italian',35,10000,39000000,'Injured');
+INSERT INTO PLAYERS  VALUES (99,1596,'Luis','Hernández','Midfielder','Dutch',28,236000,87000000,'Available');
+INSERT INTO PLAYERS  VALUES (11111,1619,'Francisco','Sánchez','Defender','Argentinian',18,273000,85000000,'Suspended');
+INSERT INTO PLAYERS  VALUES (45,1642,'David','González','Goalkeeper','Portuguese',43,168000,29000000,'Available');
+INSERT INTO PLAYERS  VALUES (11,1665,'Miguel','García','Goalkeeper','Portuguese',30,47000,59000000,'Injured');
+INSERT INTO PLAYERS  VALUES (99,1688,'David','Rodríguez','Forward','Dutch',25,134000,19000000,'Suspended');
+INSERT INTO PLAYERS  VALUES (100,1711,'Carlos','Pérez','Forward','Portuguese',11,275000,60000000,'Available');
+INSERT INTO PLAYERS  VALUES (11111,1734,'Francisco','Rodríguez','Goalkeeper','Dutch',8,247000,86000000,'Suspended');
+INSERT INTO PLAYERS  VALUES (0,1757,'Francisco','Torres','Midfielder','Dutch',39,268000,55000000,'Suspended');
+INSERT INTO PLAYERS  VALUES (99,1780,'Antonio','Martínez','Forward','Dutch',16,136000,82000000,'Injured');
+INSERT INTO PLAYERS  VALUES (200,1803,'Francisco','Sánchez','Defender','French',28,49000,92000000,'Injured');
+INSERT INTO PLAYERS  VALUES (589,1826,'Luis','López','Midfielder','German',34,51000,18000000,'Available');
+INSERT INTO PLAYERS  VALUES (3,1849,'Luis','Hernández','Defender','Portuguese',4,222000,53000000,'Injured');
+INSERT INTO PLAYERS  VALUES (200,1872,'Francisco','Sánchez','Forward','Spanish',13,225000,50000000,'Suspended');
+INSERT INTO PLAYERS  VALUES (589,1895,'Carlos','Torres','Forward','Dutch',0,190000,39000000,'Injured');
+INSERT INTO PLAYERS  VALUES (3,1918,'José','Ramírez','Defender','Dutch',14,149000,56000000,'Injured');
+INSERT INTO PLAYERS  VALUES (89,1941,'Carlos','Hernández','Midfielder','Italian',46,94000,60000000,'Available');
+INSERT INTO PLAYERS  VALUES (45,1964,'David','Ramírez','Goalkeeper','Italian',37,298000,85000000,'Available');
+INSERT INTO PLAYERS  VALUES (11111,1987,'Juan','Hernández','Defender','Dutch',11,35000,34000000,'Injured');
+INSERT INTO PLAYERS  VALUES (200,2010,'Pedro','Rodríguez','Forward','German',21,204000,36000000,'Injured');
+INSERT INTO PLAYERS  VALUES (150,2033,'Jorge','Pérez','Forward','Spanish',47,286000,7000000,'Injured');
+INSERT INTO PLAYERS  VALUES (89,2056,'Luis','Pérez','Goalkeeper','Spanish',15,112000,3000000,'Suspended');
+INSERT INTO PLAYERS  VALUES (150,2079,'Miguel','Rodríguez','Defender','Dutch',42,68000,73000000,'Available');
+INSERT INTO PLAYERS  VALUES (99,2102,'Antonio','López','Midfielder','Brazilian',38,68000,100000000,'Available');
+INSERT INTO PLAYERS  VALUES (100,2125,'Jorge','Pérez','Goalkeeper','French',36,202000,51000000,'Suspended');
+INSERT INTO PLAYERS  VALUES (3,2148,'Luis','Pérez','Defender','Argentinian',44,164000,88000000,'Suspended');
+INSERT INTO PLAYERS  VALUES (89,2171,'Juan','Torres','Goalkeeper','German',34,229000,85000000,'Injured');
+INSERT INTO PLAYERS  VALUES (11111,2194,'Juan','Ramírez','Midfielder','Spanish',26,260000,14000000,'Injured');
+INSERT INTO PLAYERS  VALUES (150,2217,'Pedro','Sánchez','Defender','Italian',11,277000,84000000,'Injured');
+INSERT INTO PLAYERS  VALUES (99,2240,'David','Ramírez','Forward','Dutch',27,147000,42000000,'Available');
+INSERT INTO PLAYERS  VALUES (11,2263,'Juan','López','Forward','Portuguese',48,247000,73000000,'Suspended');
+INSERT INTO PLAYERS  VALUES (3,2286,'José','González','Goalkeeper','Dutch',20,103000,63000000,'Available');
+INSERT INTO PLAYERS  VALUES (200,2309,'Pedro','López','Midfielder','French',38,151000,72000000,'Available');
+INSERT INTO PLAYERS  VALUES (0,2332,'Francisco','Rodríguez','Goalkeeper','Portuguese',46,218000,63000000,'Suspended');
+INSERT INTO PLAYERS  VALUES (150,2355,'Luis','Sánchez','Forward','Dutch',50,18000,12000000,'Injured');
+INSERT INTO PLAYERS  VALUES (89,2378,'Luis','Hernández','Defender','French',42,198000,61000000,'Suspended');
+INSERT INTO PLAYERS  VALUES (11,2401,'Francisco','González','Forward','English',21,190000,90000000,'Injured');
+INSERT INTO PLAYERS  VALUES (45,2424,'Jorge','López','Midfielder','Portuguese',7,108000,41000000,'Available');
+INSERT INTO PLAYERS  VALUES (150,2447,'Francisco','Martínez','Defender','Portuguese',47,257000,36000000,'Suspended');
+INSERT INTO PLAYERS  VALUES (45,2470,'David','Ramírez','Midfielder','Argentinian',12,161000,30000000,'Injured');
+INSERT INTO PLAYERS  VALUES (1,2493,'Miguel','López','Goalkeeper','English',8,150000,6000000,'Available');
+INSERT INTO PLAYERS  VALUES (45,2516,'Francisco','López','Defender','Dutch',6,16000,74000000,'Injured');
+INSERT INTO PLAYERS  VALUES (3,2539,'Antonio','Sánchez','Forward','German',11,36000,33000000,'Injured');
+INSERT INTO PLAYERS  VALUES (3,2562,'Juan','Pérez','Forward','Dutch',4,37000,20000000,'Available');
+INSERT INTO PLAYERS  VALUES (11,2585,'David','López','Goalkeeper','Portuguese',7,295000,98000000,'Injured');
+INSERT INTO PLAYERS  VALUES (11,2608,'David','Torres','Defender','English',24,240000,57000000,'Injured');
+INSERT INTO PLAYERS  VALUES (99,2631,'David','Hernández','Midfielder','Belgian',39,40000,79000000,'Suspended');
+INSERT INTO PLAYERS  VALUES (11,2654,'Juan','Rodríguez','Defender','French',42,51000,21000000,'Available');
+INSERT INTO PLAYERS  VALUES (11,2677,'Miguel','Ramírez','Goalkeeper','Brazilian',0,219000,58000000,'Suspended');
+INSERT INTO PLAYERS  VALUES (99,2700,'David','Sánchez','Midfielder','Spanish',14,157000,91000000,'Injured');
+INSERT INTO PLAYERS  VALUES (11,2723,'Antonio','Pérez','Defender','French',50,111000,55000000,'Available');
+INSERT INTO PLAYERS  VALUES (45,2746,'Francisco','Rodríguez','Defender','French',9,46000,8000000,'Available');
+INSERT INTO PLAYERS  VALUES (3,2769,'Jorge','Torres','Midfielder','Dutch',7,249000,89000000,'Injured');
+INSERT INTO PLAYERS  VALUES (1,2792,'José','López','Forward','Dutch',5,30000,56000000,'Suspended');
+INSERT INTO PLAYERS  VALUES (45,2815,'Pedro','Torres','Midfielder','Spanish',5,127000,87000000,'Suspended');
+INSERT INTO PLAYERS  VALUES (11111,2838,'David','García','Midfielder','Belgian',2,99000,61000000,'Suspended');
+INSERT INTO PLAYERS  VALUES (11111,2861,'Antonio','López','Defender','Belgian',27,261000,12000000,'Injured');
+
+
+
+
+/*CREATING SUPPORT STAFF TABLE*/
+
+
+create table SUPPORT_STAFF 
+(HC_First_name varchar(30), 
+HC_Last_name varchar(30),
+HC_Email varchar(30),
+HC_PH_Number varchar(30),
+AC_First_name varchar(30), 
+AC_Last_name varchar(30),
+AC_Email varchar(30),
+AC_PH_Number varchar(30),
+PH_First_name varchar(30), 
+PH_Last_name varchar(30),
+PH_Email varchar(30),
+PH_PH_Number varchar(30));
+
+
+/*INSERTING VALUES IN THE TABLE*/
+
+
+insert into SUPPORT_STAFF
+values('Carlo', 'Ancelotti',	'ancelotti@imagosport.com',	'+43-242-2679', 'Juan', 'García', 'juan.garcía@coachmail.com', '+43-242-2679', 'Jorge', 'Martínez', 'jorge.martínez@mail.com', '+61-194-7224');
+insert into SUPPORT_STAFF
+values('Zinedine', 'Zidane', 'zinedine.z@hotmail.fr', '+93-833-9928','Francisco', 'Pérez', 'francisco.pérez@football.com', '+10-195-4582', 'Pedro' ,'González', 'pedro.gonzález@physiomail.com', '+17-649-3045');
+insert into SUPPORT_STAFF
+values('Santiago', 'Solari', 'santigo.so@hotmail.rm', '+33-881-6514', 'Francisco', 'Torres', 'francisco.torres@example.com', '+93-833-9928', 'Juan', 'Ramírez',	'juan.ramírez@physiomail.com', '+69-296-2139');
+insert into SUPPORT_STAFF
+values('Julen', 'Lopetegui','julen.lopet@imagosport.com', '+88-227-7201', 'Luis' ,'Sánchez', 'luis.sánchez@coachmail.com', '+12-814-7924', 'Luis', 'López', 'luis.lópez@example.com', '+41-489-5554');
+
+
+select * from SUPPORT_STAFF;
+
+
+create table HEAD_COACH (
+HC_First_name varchar(30), 
+HC_Last_name varchar(30),
+HC_Email varchar(30),
+HC_PH_Number varchar(30));
+
+insert into HEAD_COACH select 
+HC_First_name, 
+HC_Last_name,
+HC_Email,
+HC_PH_Number
+from SUPPORT_STAFF;
+
+select * from HEAD_COACH
+
+create table ASSISTANT_COACH 
+(AC_First_name varchar(30), 
+AC_Last_name varchar(30),
+AC_Email varchar(30),
+AC_PH_Number varchar(30));
+
+insert into ASSISTANT_COACH select 
+AC_First_name, 
+AC_Last_name,
+AC_Email, 
+AC_PH_Number 
+from SUPPORT_STAFF;
+
+select * from ASSISTANT_COACH
+
+create table PHYSIO
+(PH_First_name varchar(30), 
+PH_Last_name varchar(30),
+PH_Email varchar(30),
+PH_PH_Number varchar(30));
+
+insert into PHYSIO select 
+PH_First_name, 
+PH_Last_name,
+PH_Email,
+PH_PH_Number
+from SUPPORT_STAFF;
+
+select * from PHYSIO
+
+
+
+
+
+
+
+
+
+select * from PLAYERS ;
+
+
+
+
+select Position,count(Position) AS Number_of_players from PLAYERS group by Position;
+
+select Player_ID, First_name, Last_name, (Monthly_wage / 4) as Weekly_wage, (Monthly_wage * 12) as Annual_wage from players order by Weekly_wage, Annual_wage;
+
+select Opponent, Players from MATCHES a where Opponent in (select Recent_match from TEAMS b where a.Opponent_ID = b.Opponent_ID) ;
+
+
+select a.Team_name, b.Opponent from TEAMS a, MATCHES b where date_of_the_match between '01/12/2020' and '01/12/2023' group by a.Team_name,b.opp; 
+
+select a.First_name, a.Last_name, a.Position, b.date_of_the_match from PLAYERS a, MATCHES b where date_of_the_match like '2023-02-23';
+
+
+select a.Team_name,b.Opponent,a.Head_coach from TEAMS a, MATCHES b group by a.Team_name,a.Head_coach,b.Opponent;
+
+
+select First_name,Last_name,Appearences from PLAYERS order by Appearences desc;
+
+create table PLAYS
+(Match_ID int,
+Team_name varchar(30),
+Player_ID int);
+
+INSERT INTO PLAYS VALUES (1,'Real Madrid',124);
+INSERT INTO PLAYS VALUES (51,'Real Madrid',147);
+INSERT INTO PLAYS VALUES (101,'Real Madrid',170);
+INSERT INTO PLAYS VALUES (151,'Real Madrid',193);
+INSERT INTO PLAYS VALUES (201,'Real Madrid',216);
+INSERT INTO PLAYS VALUES (251,'Real Madrid',239);
+INSERT INTO PLAYS VALUES (301,'Real Madrid',262);
+INSERT INTO PLAYS VALUES (351,'Real Madrid',285);
+INSERT INTO PLAYS VALUES (401,'Real Madrid',308);
+INSERT INTO PLAYS VALUES (451,'Real Madrid',331);
+INSERT INTO PLAYS VALUES (501,'Real Madrid',354);
+INSERT INTO PLAYS VALUES (551,'Real Madrid',377);
+INSERT INTO PLAYS VALUES (601,'Real Madrid',400);
+INSERT INTO PLAYS VALUES (651,'Real Madrid',423);
+INSERT INTO PLAYS VALUES (701,'Real Madrid',446);
+INSERT INTO PLAYS VALUES (751,'Real Madrid',469);
+INSERT INTO PLAYS VALUES (801,'Real Madrid',492);
+INSERT INTO PLAYS VALUES (851,'Real Madrid',515);
+INSERT INTO PLAYS VALUES (901,'Real Madrid',538);
+INSERT INTO PLAYS VALUES (951,'Real Madrid',561);
+INSERT INTO PLAYS VALUES (1001,'Real Madrid',584);
+INSERT INTO PLAYS VALUES (1051,'Real Madrid',607);
+INSERT INTO PLAYS VALUES (1101,'Real Madrid',630);
+INSERT INTO PLAYS VALUES (1151,'Real Madrid',653);
+INSERT INTO PLAYS VALUES (1201,'Real Madrid',676);
+INSERT INTO PLAYS VALUES (1251,'Real Madrid',699);
+INSERT INTO PLAYS VALUES (1301,'Real Madrid',722);
+INSERT INTO PLAYS VALUES (1351,'Real Madrid',745);
+INSERT INTO PLAYS VALUES (1401,'Real Madrid',768);
+INSERT INTO PLAYS VALUES (1451,'Real Madrid',791);
+INSERT INTO PLAYS VALUES (1501,'Real Madrid',814);
+INSERT INTO PLAYS VALUES (1551,'Real Madrid',837);
+INSERT INTO PLAYS VALUES (1601,'Real Madrid',860);
+INSERT INTO PLAYS VALUES (1651,'Real Madrid',883);
+INSERT INTO PLAYS VALUES (1701,'Real Madrid',906);
+INSERT INTO PLAYS VALUES (1751,'Real Madrid',929);
+INSERT INTO PLAYS VALUES (1801,'Real Madrid',952);
+INSERT INTO PLAYS VALUES (1851,'Real Madrid',975);
+INSERT INTO PLAYS VALUES (1901,'Real Madrid',998);
+INSERT INTO PLAYS VALUES (1951,'Real Madrid',1021);
+INSERT INTO PLAYS VALUES (2001,'Real Madrid',1044);
+INSERT INTO PLAYS VALUES (2051,'Real Madrid',1067);
+INSERT INTO PLAYS VALUES (2101,'Real Madrid',1090);
+INSERT INTO PLAYS VALUES (2151,'Real Madrid',1113);
+INSERT INTO PLAYS VALUES (2201,'Real Madrid',1136);
+INSERT INTO PLAYS VALUES (2251,'Real Madrid',1159);
+INSERT INTO PLAYS VALUES (2301,'Real Madrid',1182);
+INSERT INTO PLAYS VALUES (2351,'Real Madrid',1205);
+INSERT INTO PLAYS VALUES (2401,'Real Madrid',1228);
+INSERT INTO PLAYS VALUES (2451,'Real Madrid',1251);
+INSERT INTO PLAYS VALUES (2501,'Real Madrid',1274);
+INSERT INTO PLAYS VALUES (2551,'Real Madrid',1297);
+INSERT INTO PLAYS VALUES (2601,'Real Madrid',1320);
+INSERT INTO PLAYS VALUES (2651,'Real Madrid',1343);
+INSERT INTO PLAYS VALUES (2701,'Real Madrid',1366);
+INSERT INTO PLAYS VALUES (2751,'Real Madrid',1389);
+INSERT INTO PLAYS VALUES (2801,'Real Madrid',1412);
+INSERT INTO PLAYS VALUES (2851,'Real Madrid',1435);
+INSERT INTO PLAYS VALUES (2901,'Real Madrid',1458);
+INSERT INTO PLAYS VALUES (2951,'Real Madrid',1481);
+INSERT INTO PLAYS VALUES (3001,'Real Madrid',1504);
+INSERT INTO PLAYS VALUES (3051,'Real Madrid',1527);
+INSERT INTO PLAYS VALUES (3101,'Real Madrid',1550);
+INSERT INTO PLAYS VALUES (3151,'Real Madrid',1573);
+INSERT INTO PLAYS VALUES (3201,'Real Madrid',1596);
+INSERT INTO PLAYS VALUES (3251,'Real Madrid',1619);
+INSERT INTO PLAYS VALUES (3301,'Real Madrid',1642);
+INSERT INTO PLAYS VALUES (3351,'Real Madrid',1665);
+INSERT INTO PLAYS VALUES (3401,'Real Madrid',1688);
+INSERT INTO PLAYS VALUES (3451,'Real Madrid',1711);
+INSERT INTO PLAYS VALUES (3501,'Real Madrid',1734);
+INSERT INTO PLAYS VALUES (3551,'Real Madrid',1757);
+INSERT INTO PLAYS VALUES (3601,'Real Madrid',1780);
+INSERT INTO PLAYS VALUES (3651,'Real Madrid',1803);
+INSERT INTO PLAYS VALUES (3701,'Real Madrid',1826);
+INSERT INTO PLAYS VALUES (3751,'Real Madrid',1849);
+INSERT INTO PLAYS VALUES (3801,'Real Madrid',1872);
+INSERT INTO PLAYS VALUES (3851,'Real Madrid',1895);
+INSERT INTO PLAYS VALUES (3901,'Real Madrid',1918);
+INSERT INTO PLAYS VALUES (3951,'Real Madrid',1941);
+INSERT INTO PLAYS VALUES (4001,'Real Madrid',1964);
+INSERT INTO PLAYS VALUES (4051,'Real Madrid',1987);
+INSERT INTO PLAYS VALUES (4101,'Real Madrid',2010);
+INSERT INTO PLAYS VALUES (4151,'Real Madrid',2033);
+INSERT INTO PLAYS VALUES (4201,'Real Madrid',2056);
+INSERT INTO PLAYS VALUES (4251,'Real Madrid',2079);
+INSERT INTO PLAYS VALUES (4301,'Real Madrid',2102);
+INSERT INTO PLAYS VALUES (4351,'Real Madrid',2125);
+INSERT INTO PLAYS VALUES (4401,'Real Madrid',2148);
+INSERT INTO PLAYS VALUES (4451,'Real Madrid',2171);
+INSERT INTO PLAYS VALUES (4501,'Real Madrid',2194);
+INSERT INTO PLAYS VALUES (4551,'Real Madrid',2217);
+INSERT INTO PLAYS VALUES (4601,'Real Madrid',2240);
+INSERT INTO PLAYS VALUES (4651,'Real Madrid',2263);
+INSERT INTO PLAYS VALUES (4701,'Real Madrid',2286);
+INSERT INTO PLAYS VALUES (4751,'Real Madrid',2309);
+INSERT INTO PLAYS VALUES (4801,'Real Madrid',2332);
+INSERT INTO PLAYS VALUES (4851,'Real Madrid',2355);
+INSERT INTO PLAYS VALUES (4901,'Real Madrid',2378);
+INSERT INTO PLAYS VALUES (4951,'Real Madrid',2401);
+INSERT INTO PLAYS VALUES (5001,'Real Madrid',2424);
+INSERT INTO PLAYS VALUES (5051,'Real Madrid',2447);
+INSERT INTO PLAYS VALUES (5101,'Real Madrid',2470);
+INSERT INTO PLAYS VALUES (5151,'Real Madrid',2493);
+INSERT INTO PLAYS VALUES (5201,'Real Madrid',2516);
+INSERT INTO PLAYS VALUES (5251,'Real Madrid',2539);
+INSERT INTO PLAYS VALUES (5301,'Real Madrid',2562);
+INSERT INTO PLAYS VALUES (5351,'Real Madrid',2585);
+INSERT INTO PLAYS VALUES (5401,'Real Madrid',2608);
+INSERT INTO PLAYS VALUES (5451,'Real Madrid',2631);
+INSERT INTO PLAYS VALUES (5501,'Real Madrid',2654);
+INSERT INTO PLAYS VALUES (5551,'Real Madrid',2677);
+INSERT INTO PLAYS VALUES (5601,'Real Madrid',2700);
+INSERT INTO PLAYS VALUES (5651,'Real Madrid',2723);
+INSERT INTO PLAYS VALUES (5701,'Real Madrid',2746);
+INSERT INTO PLAYS VALUES (5751,'Real Madrid',2769);
+INSERT INTO PLAYS VALUES (5801,'Real Madrid',2792);
+INSERT INTO PLAYS VALUES (5851,'Real Madrid',2815);
+INSERT INTO PLAYS VALUES (5901,'Real Madrid',2838);
+INSERT INTO PLAYS VALUES (5951,'Real Madrid',2861);
+
+
+
+CREATE TABLE HAVE(Team_name VARCHAR(30),Player_ID int);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',124);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',147);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',170);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',193);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',216);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',239);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',262);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',285);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',308);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',331);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',354);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',377);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',400);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',423);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',446);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',469);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',492);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',515);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',538);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',561);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',584);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',607);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',630);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',653);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',676);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',699);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',722);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',745);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',768);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',791);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',814);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',837);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',860);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',883);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',906);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',929);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',952);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',975);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',998);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1021);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1044);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1067);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1090);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1113);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1136);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1159);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1182);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1205);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1228);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1251);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1274);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1297);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1320);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1343);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1366);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1389);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1412);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1435);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1458);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1481);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1504);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1527);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1550);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1573);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1596);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1619);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1642);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1665);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1688);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1711);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1734);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1757);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1780);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1803);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1826);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1849);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1872);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1895);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1918);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1941);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1964);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',1987);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2010);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2033);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2056);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2079);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2102);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2125);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2148);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2171);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2194);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2217);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2240);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2263);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2286);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2309);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2332);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2355);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2378);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2401);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2424);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2447);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2470);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2493);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2516);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2539);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2562);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2585);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2608);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2631);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2654);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2677);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2700);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2723);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2746);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2769);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2792);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2815);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2838);
+INSERT INTO HAVE (Team_name,Player_ID) VALUES ('Real Madrid',2861);
+select * from PLAYERS
+exec sp_columns TEAMS;
+exec sp_columns MATCHES;
+exec sp_columns PLAYERS;
+exec sp_columns PLAYS;
+exec sp_columns HAVE;
+exec sp_columns HEAD_COACH;
+exec sp_columns ASSISTANT_COACH;
+exec sp_columns PHYSIO;
+
+Select first_name, last_name from PLAYERS order by Transfer_value;
+Select First_name, Last_name, Monthly_wage, Position from players order by Position; 
+select b.First_name, b.Last_name , a.date_of_the_match, b.Appearences from MATCHES a, PLAYERS b where a.Opponent_ID = b.Opponent_ID;
+select sum(Monthly_Wage) as TOTAL_MONTHLY_WAGE, min(Transfer_value), max(Transfer_value) as TOTAL_TRANSFER_VALUE from PLAYERS
+
+select Player_ID, First_name, Last_name, (Monthly_wage / 4) as Weekly_wage, (Monthly_wage * 12) as Annual_wage from players order by Weekly_wage desc, Annual_wage desc;
+
+
+
